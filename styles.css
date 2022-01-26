@@ -67,13 +67,14 @@ ol {
   height: fit-content;
 }
 
+.responsive-img {
+  width: 80%;
+  height: auto;
+}
+
 .contenido-actividad-bienvenida {
   width: 73%;
   height: 64%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  align-items: center;
   border: 9px #88075d double;
   border-radius: 28px 28px;
   background-color: white;
@@ -83,6 +84,13 @@ ol {
   opacity: 1;
   overflow: hidden;
   background-blend-mode: hard-light;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  align-items: center;
 }
 
 
@@ -176,15 +184,22 @@ ol {
   flex-direction: column;
   font-size: 0.9em;
   padding: 12px;
-  width:80%
+  width: 80%
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 
 
-video{
+video {
   height: 100%;
   width: fit-content;
- 
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -209,14 +224,27 @@ video{
     height: 78vh;
   }
 
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    align-items: center;
+  }
+
+
   .contenedor-actividad {
     display: grid;
     grid-template-columns: 1fr;
-    height: 60vh;
+    height: 41vh;
     align-items: center;
   }
 
   .botones {
     width: 71vw;
+  }
+
+  .responsive-img {
+    width: 100%;
+    height: auto;
   }
 }
